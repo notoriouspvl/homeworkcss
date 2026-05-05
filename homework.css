@@ -1,0 +1,64 @@
+/* ===== Базовые стили (мобильная версия - viewport меньше 772px) ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Стили для div-контейнеров */
+div {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px auto;
+    /* В мобильной версии div занимает 100% ширины (горизонтально) */
+    width: 100%;
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* ===== Медиа-запрос №1: ПЛАНШЕТНЫЙ ВИД (от 772px и выше) ===== */
+@media screen and (min-width: 772px) {
+    div {
+        /* Div'ы занимают 45% ширины области просмотра */
+        width: 45%;
+        /* Чтобы div'ы размещались горизонтально (два в ряд), добавляем float или flex */
+        /* Используем inline-block или float. Проще всего через float */
+        float: left;
+        margin: 2.5%;
+    }
+
+    /* Очищаем float после row, но можно и через clearfix */
+    body::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Изображения — не более 30% высоты области просмотра */
+    img {
+        max-height: 30vh;
+        width: auto;
+    }
+}
+
+/* ===== Медиа-запрос №2: БОЛЬШОЙ ЭКРАН (от 998px и выше) ===== */
+@media screen and (min-width: 998px) {
+    div {
+        /* Div'ы занимают 30% ширины области просмотра (три в ряд) */
+        width: 30%;
+        margin: 1.66%;
+    }
+}
