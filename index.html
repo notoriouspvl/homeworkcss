@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывчивый сайт - Мобильный, Планшет, Десктоп</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Отзывчивый макет</h1>
+    <p>Изменяйте ширину окна браузера, чтобы увидеть, как меняется расположение блоков:</p>
+    <ul>
+        <li><strong>&lt; 772px:</strong> Блоки идут вертикально (100% ширины)</li>
+        <li><strong>772px - 997px:</strong> Блоки по 45% (2 в ряд), изображения не выше 30vh</li>
+        <li><strong>&ge; 998px:</strong> Блоки по 30% (3 в ряд)</li>
+    </ul>
+
+    <!-- Первый блок с изображением -->
+    <div>
+        <h2>Блок 1</h2>
+        <img src="https://placehold.co/600x400/lightblue/white?text=Image+1" alt="Пример изображения 1">
+        <p>Какой-то текст для первого блока. Контент может быть любым.</p>
+    </div>
+
+    <!-- Второй блок с изображением -->
+    <div>
+        <h2>Блок 2</h2>
+        <img src="https://placehold.co/600x400/lightgreen/white?text=Image+2" alt="Пример изображения 2">
+        <p>Текст для второго блока. Важно, чтобы изображения не превышали 30% высоты окна на планшетах.</p>
+    </div>
+
+    <!-- Третий блок с изображением -->
+    <div>
+        <h2>Блок 3</h2>
+        <img src="https://placehold.co/600x400/lightcoral/white?text=Image+3" alt="Пример изображения 3">
+        <p>Текст для третьего блока. При ширине от 998px все три блока встанут в ряд.</p>
+    </div>
+
+    <!-- Четвертый блок (для проверки: на планшете будет переноситься на вторую строку) -->
+    <div>
+        <h2>Блок 4</h2>
+        <img src="https://placehold.co/600x400/lightgoldenrodyellow/white?text=Image+4" alt="Пример изображения 4">
+        <p>Дополнительный блок, чтобы показать, что перенос работает корректно.</p>
+    </div>
+</body>
+</html>
